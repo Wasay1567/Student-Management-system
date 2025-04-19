@@ -8,9 +8,9 @@ import (
 func SetupRoutes(r *gin.Engine) {
 	students := r.Group("/student")
 	{
-		students.POST("/", controllers.RegisterStudent)
+		students.POST("", controllers.RegisterStudent)
 		students.GET("/:id", controllers.GetStudentByID)
-		students.GET("/", controllers.GetAllStudents)
+		students.GET("", controllers.GetAllStudents)
 		students.PUT("/:id", controllers.UpdateStudentByID)
 		students.DELETE("/:id", controllers.DeleteStudentByID)
 	}

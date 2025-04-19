@@ -10,3 +10,10 @@ type Student struct {
 	Country     string       `json:"country"`
 	Enrollments []Enrollment `gorm:"foreignKey:StudentID"`
 }
+
+type RegStudent struct {
+	Name    string `json:"name"`
+	Email   string `json:"email"`
+	Age     uint   `json:"age"`
+	Country string `json:"country"`
+}
